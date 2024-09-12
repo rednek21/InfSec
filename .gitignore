@@ -1,3 +1,4 @@
 .idea
 public_key.pem
 private_key.pem
+logs
