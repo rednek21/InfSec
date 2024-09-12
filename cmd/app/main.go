@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	// прикол
 	if err := app.Run(); err != nil {
 		log.Fatal(err)
 	}
