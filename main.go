@@ -1,14 +1,13 @@
-package app
+package main
 
 import (
-	"InfSec/internal/config"
-	"InfSec/internal/transport/rest/server"
 	"InfSec/pkg/logger"
+	"InfSec/src/config"
+	"InfSec/src/transport/rest/server"
 	"context"
 )
 
-// Run запускает основное приложение
-func Run() error {
+func main() {
 	// Инициализация контекста приложения
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
@@ -29,9 +28,6 @@ func Run() error {
 
 	srv := server.New(cfg, log)
 	if err := srv.Run(ctx); err != nil {
-		log.Error("Error initializing server: %v", err)
-		return err
+		log.Fatal("Error initializing server: %v", err)
 	}
-
-	return nil
 }

@@ -1,8 +1,8 @@
 package server
 
 import (
-	"InfSec/internal/config"
 	"InfSec/pkg/logger"
+	"InfSec/src/config"
 	"context"
 	"errors"
 	"github.com/gin-gonic/gin"

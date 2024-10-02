@@ -1,7 +1,7 @@
 package database
 
 import (
-	"InfSec/internal/config"
+	"InfSec/src/config"
 	"context"
 	"fmt"
 	"github.com/jackc/pgx/v5/pgxpool"
